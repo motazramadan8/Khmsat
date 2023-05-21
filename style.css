@@ -1,0 +1,1590 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Cairo', sans-serif;
+    background-color: #F1F1F1;
+    overflow-x: hidden;
+}
+/* start nav */
+nav{
+    background-color: #444;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+}
+
+.navv{
+  margin-left: 25px;
+  color: #efefef;
+  margin-top: 0px;
+  padding-top: 22px;
+  padding-bottom: 20px;
+  margin-bottom: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-right: 5px;
+}
+.navv:hover{
+    background-color: rgba(150, 150, 150, 0.625);
+    margin-left: 25px;
+    color: #efefef;
+    margin-top: 0px;
+    padding-top: 22px;
+    padding-bottom: 20px;
+    margin-bottom: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-right: 5px;
+}
+.togglesearch{
+  background: #E8E8E4;
+  position: absolute;
+  top: 54px;
+  left: 28.7%;
+  width: 320px;
+  height: 73px;
+  line-height: 60px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  display: none;
+}
+
+.togglesearch:before{
+  content: "";
+  position: absolute;
+  top: -32px;
+  right: 13px;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-top: 14px solid transparent;
+}
+
+.togglesearch input[type="text"]{
+  width: 200px;
+  padding: 5px 10px;
+  margin-left: 23px;
+  border: 1px solid #d80b1500;
+  outline: none;
+}
+
+.togglesearch input[type="button"]{
+  width: 80px;
+  padding: 5px 0;
+  background: #52b035;
+  color: #fff;
+  border: 1px solid #52b035;
+  outline: none;
+  cursor: pointer;
+}
+.btn{
+    color: #efefef;
+    border-color: rgb(197, 197, 197);
+    border-width: 1px;
+    border-radius: 0px;
+    margin-top: 10px;
+    margin-left: 15px;
+    font-weight: 500;
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+.btn:hover{
+    color: #efefef;
+    border-color: rgb(197, 197, 197);
+    border-width: 1px;
+    border-radius: 0px;
+    margin-top: 10px;
+    margin-left: 15px;
+    background-color: rgba(150, 150, 150, 0.625);
+}
+
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 3; /* Stay on top */
+    top: 60px;
+    right: 0;
+    background-color: #fff; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+
+  }
+  
+  /* The navigation menu links */
+  .sidenav a {
+    padding-top: 30px;
+    padding-left: 130px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #444;
+    display: block;
+    transition: 0.3s;
+    width: 300px;
+    direction: rtl;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover {
+    color: #52b035;
+  }
+
+  .sidenav .sse{
+    outline: none;
+    border: none;
+    width: 90%;
+    height: 60px;
+    direction: rtl;
+    margin-left: 10px;
+    background-color: #fff;
+  }
+  
+  /* Position and style the close button (top right corner) */
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+  #main {
+    transition: margin-left .5s;
+    padding: 20px;
+  }
+  
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+  .menu{
+    margin-top: 0;
+    color: white;
+    font-size: 30px;
+    padding-top: 15px;
+    padding-right: 20px;
+    margin-right: 0px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+    cursor: pointer;
+  }
+  .menu:hover{
+    margin-top: 0;
+    color: white;
+    font-size: 30px;
+    padding-top: 15px;
+    background-color: #818181;
+    padding-right: 20px;
+    margin-right: 0px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+  }
+
+  .logo{
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+
+  .logo2{
+    margin-right: 20px;
+    margin-bottom: 20px;
+    display: none;
+  }
+
+  .ttttt{
+    color: white;
+    margin-right: 20px;
+    text-decoration: none;
+    padding: 12px 20px;
+    margin-bottom: 60px;
+  }
+
+  .ttttt:hover{
+    color: white;
+    margin-right: 20px;
+    text-decoration: none;
+    background-color: #818181;
+    padding: 12px 20px;
+    margin-bottom: 60px;
+  }
+
+  @media (max-width: 780px) {
+    .ttttt{
+      color: white;
+      margin-right: 20px;
+      text-decoration: none;
+      padding: 12px 20px;
+      margin-bottom: 60px;
+      display: none;
+    }
+
+    .sea{
+      display: none;
+    }
+
+    .new{
+      display: none;
+    }
+
+    .seec{
+      width: 600px;
+      height: 70px;
+      background-color: #fff;
+      border: none;
+    }
+    
+    
+  }
+
+
+  @media (max-width: 450px) {
+    .logo{
+      margin-right: 20px;
+      margin-bottom: 20px;
+      display: none;
+    }
+
+    .logo2{
+      margin-top: 10px;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      display: flex;
+    }
+
+    .right_nav{
+      display: flex;
+    }
+
+  }
+
+  .sec1{
+    background-image: url("hero-33cc6eb8f1a98f8aacf154a4ff4c5f76d5610553e8ba4accb6d22515a64a184a.jpg");
+    background-size: cover;
+    height: 700px;
+  }
+
+  .hhh1{
+    margin-top: 230px;
+    color: black;
+    font-size: 35px;
+    text-align: center;
+  }
+
+  .pp1{
+    text-align: center;
+    margin-top: 25px;
+    font-size: 19px;
+  }
+
+  .searrrr{
+    direction: rtl;
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid #ccc;
+    width: 666px;
+    margin: auto;
+    z-index: 6;
+  }
+
+  .seec{
+    width: 600px;
+    height: 70px;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    padding-right: 10px;
+  }
+
+  .seec::placeholder{
+    padding-right: 10px;
+  }
+
+  .sub{
+    background-color: #52b035;
+    border: none;
+    color: white;
+    padding: 15px;
+    outline: #fff solid 8px;
+
+  }
+
+  @media (max-width: 691px) {
+    .seec{
+      width: 400px;
+      height: 70px;
+      background-color: #fff;
+      border: none;
+    }
+
+    .searrrr{
+      direction: rtl;
+      display: flex;
+      justify-content: space-around;
+      border: 1px solid #ccc;
+      width: 466px;
+      margin: auto;
+      z-index: 6;
+    }
+    /*
+     .sec2{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+     }
+
+     .ddiv1{
+      width: 500px;
+      height: 200px;
+      background-image: url('bbok.jpg');
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-size: cover;
+      margin: 20px auto ;
+      font-size: 30px;
+      color: white;
+      position: relative;
+      cursor: pointer;
+    }
+    .ddiv1::after{
+      width: 100%;
+      height: 100%;
+      background-color: black;
+      opacity: .4;
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  
+    .ddiv2{
+      width: 23%;
+      height: 200px;
+      background-image: url('social.jpg');
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-size: 100% 100%;
+      margin: 20px auto ;
+      font-size: 30px;
+      color: white;
+      position: relative;
+      cursor: pointer;
+    }
+    .ddiv2::after{
+      width: 100%;
+      height: 100%;
+      background-color: black;
+      opacity: .4;
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  
+    .ddiv3{
+      width: 23%;
+      height: 200px;
+      background-image: url('prog.jpg');
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-size: 100% 100%;
+      margin: 20px auto ;
+      font-size: 30px;
+      color: white;
+      position: relative;
+      cursor: pointer;
+    }
+  
+    .ddiv3::after{
+      width: 100%;
+      height: 100%;
+      background-color: black;
+      opacity: .4;
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  
+    .ddiv4{
+      width: 23%;
+      height: 200px;
+      background-image: url('calcolate.jpg');
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-size: 100% 100%;
+      margin: 20px auto ;
+      font-size: 30px;
+      color: white;
+      position: relative;
+      cursor: pointer;
+    }
+  
+    .ddiv4::after{
+      width: 100%;
+      height: 100%;
+      background-color: black;
+      opacity: .4;
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  
+    .ddiv5{
+      width: 23%;
+      height: 200px;
+      background-image: url('work.jpg');
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-size: 100% 100%;
+      margin: 20px auto ;
+      font-size: 30px;
+      color: white;
+      position: relative;
+      cursor: pointer;
+    }
+  
+    .ddiv5::after{
+      width: 100%;
+      height: 100%;
+      background-color: black;
+      opacity: .4;
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  
+    .ddiv6{
+      width: 23%;
+      height: 200px;
+      background-image: url('micrec.jpg');
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-size: 100% 100%;
+      margin: 20px auto ;
+      font-size: 30px;
+      color: white;
+      position: relative;
+      cursor: pointer;
+    }
+  
+    .ddiv6::after{
+      width: 100%;
+      height: 100%;
+      background-color: black;
+      opacity: .4;
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  
+    .ddiv7{
+      width: 23%;
+      height: 200px;
+      background-image: url('design.jpg');
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-size: 100% 100%;
+      margin: 20px auto ;
+      font-size: 30px;
+      color: white;
+      position: relative;
+      cursor: pointer;
+    }
+    .ddiv7::after{
+      width: 100%;
+      height: 100%;
+      background-color: black;
+      opacity: .4;
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  
+    .ddiv8{
+      width: 23%;
+      height: 200px;
+      background-image: url('montage.jpg');
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-size: 100% 100%;
+      margin: 20px auto ;
+      font-size: 30px;
+      color: white;
+      position: relative;
+      cursor: pointer;
+    }
+  
+    .ddiv8::after{
+      width: 100%;
+      height: 100%;
+      background-color: black;
+      opacity: .4;
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+    } */
+  
+  
+   
+   
+  }
+
+  @media (max-width: 481px) {
+    .seec{
+      width: 300px;
+      height: 70px;
+      background-color: #fff;
+      border: none;
+    }
+
+    .searrrr{
+      direction: rtl;
+      display: flex;
+      justify-content: space-around;
+      border: 1px solid #ccc;
+      width: 366px;
+      margin: auto;
+      z-index: 6;
+    }
+  }
+
+  @media (max-width: 280px) {
+    .seec{
+      width: 200px;
+      height: 70px;
+      background-color: #fff;
+      border: none;
+    }
+
+    .searrrr{
+      direction: rtl;
+      display: flex;
+      justify-content: space-around;
+      border: 1px solid #ccc;
+      width: 266px;
+      margin: auto;
+      z-index: 6;
+    }
+  }
+
+
+ 
+
+  .h111h{
+    margin-top: 70px;
+    font-size: 32px;
+    text-align: center;
+  }
+
+
+  .sec2{
+   width: 100%;
+   display: flex;
+   flex-wrap: wrap;
+  }
+
+  .ddiv1{
+    width: 23%;
+    height: 200px;
+    background-image: url('bbok.jpg');
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: 100% 100%;
+    margin: 20px auto ;
+    font-size: 30px;
+    color: white;
+    position: relative;
+    cursor: pointer;
+  }
+  .ddiv1::after{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: .4;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  .ddiv2{
+    width: 23%;
+    height: 200px;
+    background-image: url('social.jpg');
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: 100% 100%;
+    margin: 20px auto ;
+    font-size: 30px;
+    color: white;
+    position: relative;
+    cursor: pointer;
+  }
+  .ddiv2::after{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: .4;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  .ddiv3{
+    width: 23%;
+    height: 200px;
+    background-image: url('prog.jpg');
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: 100% 100%;
+    margin: 20px auto ;
+    font-size: 30px;
+    color: white;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .ddiv3::after{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: .4;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  .ddiv4{
+    width: 23%;
+    height: 200px;
+    background-image: url('calcolate.jpg');
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: 100% 100%;
+    margin: 20px auto ;
+    font-size: 30px;
+    color: white;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .ddiv4::after{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: .4;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  .ddiv5{
+    width: 23%;
+    height: 200px;
+    background-image: url('work.jpg');
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: 100% 100%;
+    margin: 20px auto ;
+    font-size: 30px;
+    color: white;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .ddiv5::after{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: .4;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  .ddiv6{
+    width: 23%;
+    height: 200px;
+    background-image: url('micrec.jpg');
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: 100% 100%;
+    margin: 20px auto ;
+    font-size: 30px;
+    color: white;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .ddiv6::after{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: .4;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  .ddiv7{
+    width: 23%;
+    height: 200px;
+    background-image: url('design.jpg');
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: 100% 100%;
+    margin: 20px auto ;
+    font-size: 30px;
+    color: white;
+    position: relative;
+    cursor: pointer;
+  }
+  .ddiv7::after{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: .4;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  .ddiv8{
+    width: 23%;
+    height: 200px;
+    background-image: url('montage.jpg');
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: 100% 100%;
+    margin: 20px auto ;
+    font-size: 30px;
+    color: white;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .ddiv8::after{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: .4;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  @media screen and (min-width: 200px) and (max-width: 500px) {
+    .ddiv1{
+      width: 45%;
+      height: 200px;
+      background-image: url('bbok.jpg');
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-size: 100% 100%;
+      margin: 20px auto ;
+      font-size: 25px;
+      color: white;
+      position: relative;
+      cursor: pointer;
+    }
+    .ddiv1::after{
+      width: 100%;
+      height: 100%;
+      background-color: black;
+      opacity: .4;
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  
+    .ddiv2{
+      width: 45%;
+      height: 200px;
+      background-image: url('social.jpg');
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-size: 100% 100%;
+      margin: 20px auto ;
+      font-size: 15px;
+      color: white;
+      position: relative;
+      cursor: pointer;
+    }
+    .ddiv2::after{
+      width: 100%;
+      height: 100%;
+      background-color: black;
+      opacity: .4;
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  
+    .ddiv3{
+      width: 45%;
+      height: 200px;
+      background-image: url('prog.jpg');
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-size: 100% 100%;
+      margin: 20px auto ;
+      font-size: 30px;
+      color: white;
+      position: relative;
+      cursor: pointer;
+    }
+  
+    .ddiv3::after{
+      width: 100%;
+      height: 100%;
+      background-color: black;
+      opacity: .4;
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+    
+    .ddiv4{
+      width: 45%;
+      height: 200px;
+      background-image: url('calcolate.jpg');
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-size: 100% 100%;
+      margin: 20px auto ;
+      font-size: 30px;
+      color: white;
+      position: relative;
+      cursor: pointer;
+    }
+  
+    .ddiv4::after{
+      width: 100%;
+      height: 100%;
+      background-color: black;
+      opacity: .4;
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+    .ddiv5{
+      width: 45%;
+      height: 200px;
+      background-image: url('work.jpg');
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-size: 100% 100%;
+      margin: 20px auto ;
+      font-size: 30px;
+      color: white;
+      position: relative;
+      cursor: pointer;
+    }
+  
+    .ddiv5::after{
+      width: 100%;
+      height: 100%;
+      background-color: black;
+      opacity: .4;
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    .ddiv6{
+      width: 45%;
+      height: 200px;
+      background-image: url('micrec.jpg');
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-size: 100% 100%;
+      margin: 20px auto ;
+      font-size: 30px;
+      color: white;
+      position: relative;
+      cursor: pointer;
+    }
+  
+    .ddiv6::after{
+      width: 100%;
+      height: 100%;
+      background-color: black;
+      opacity: .4;
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    .ddiv7{
+      width: 45%;
+      height: 200px;
+      background-image: url('design.jpg');
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-size: 100% 100%;
+      margin: 20px auto ;
+      font-size: 30px;
+      color: white;
+      position: relative;
+      cursor: pointer;
+    }
+  
+    .ddiv7::after{
+      width: 100%;
+      height: 100%;
+      background-color: black;
+      opacity: .4;
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    .ddiv8{
+      width: 45%;
+      height: 200px;
+      background-image: url('montage.jpg');
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-size: 100% 100%;
+      margin: 20px auto ;
+      font-size: 30px;
+      color: white;
+      position: relative;
+      cursor: pointer;
+    }
+  
+    .ddiv8::after{
+      width: 100%;
+      height: 100%;
+      background-color: black;
+      opacity: .4;
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    .seec{
+      width: 200px;
+      height: 70px;
+      background-color: #fff;
+      border: none;
+      outline: none;
+      padding-right: 10px;
+    }
+  
+    .seec::placeholder{
+      padding-right: 10px;
+    }
+  
+    .sub{
+      background-color: #52b035;
+      border: none;
+      color: white;
+      padding: 15px;
+      outline: #fff solid 8px;
+  
+    }
+  
+  }
+  @media screen and (min-width: 500px) and (max-width: 864px) {
+    .ddiv1{
+      width: 30%;
+      height: 200px;
+      background-image: url('bbok.jpg');
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-size: 100% 100%;
+      margin: 20px auto ;
+      font-size: 30px;
+      color: white;
+      position: relative;
+      cursor: pointer;
+    }
+    .ddiv1::after{
+      width: 100%;
+      height: 100%;
+      background-color: black;
+      opacity: .4;
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  
+    .ddiv2{
+      width: 30%;
+      height: 200px;
+      background-image: url('social.jpg');
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-size: 100% 100%;
+      margin: 20px auto ;
+      font-size: 30px;
+      color: white;
+      position: relative;
+      cursor: pointer;
+    }
+    .ddiv2::after{
+      width: 100%;
+      height: 100%;
+      background-color: black;
+      opacity: .4;
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  
+    .ddiv3{
+      width: 30%;
+      height: 200px;
+      background-image: url('prog.jpg');
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-size: 100% 100%;
+      margin: 20px auto ;
+      font-size: 30px;
+      color: white;
+      position: relative;
+      cursor: pointer;
+    }
+  
+    .ddiv3::after{
+      width: 100%;
+      height: 100%;
+      background-color: black;
+      opacity: .4;
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+    
+    .ddiv4{
+      width: 30%;
+      height: 200px;
+      background-image: url('calcolate.jpg');
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-size: 100% 100%;
+      margin: 20px auto ;
+      font-size: 30px;
+      color: white;
+      position: relative;
+      cursor: pointer;
+    }
+  
+    .ddiv4::after{
+      width: 100%;
+      height: 100%;
+      background-color: black;
+      opacity: .4;
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+    .ddiv5{
+      width: 30%;
+      height: 200px;
+      background-image: url('work.jpg');
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-size: 100% 100%;
+      margin: 20px auto ;
+      font-size: 30px;
+      color: white;
+      position: relative;
+      cursor: pointer;
+    }
+  
+    .ddiv5::after{
+      width: 100%;
+      height: 100%;
+      background-color: black;
+      opacity: .4;
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    .ddiv6{
+      width: 30%;
+      height: 200px;
+      background-image: url('micrec.jpg');
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-size: 100% 100%;
+      margin: 20px auto ;
+      font-size: 30px;
+      color: white;
+      position: relative;
+      cursor: pointer;
+    }
+  
+    .ddiv6::after{
+      width: 100%;
+      height: 100%;
+      background-color: black;
+      opacity: .4;
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    .ddiv7{
+      width: 45%;
+      height: 200px;
+      background-image: url('design.jpg');
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-size: 100% 100%;
+      margin: 20px auto ;
+      font-size: 30px;
+      color: white;
+      position: relative;
+      cursor: pointer;
+    }
+  
+    .ddiv7::after{
+      width: 100%;
+      height: 100%;
+      background-color: black;
+      opacity: .4;
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    .ddiv8{
+      width: 45%;
+      height: 200px;
+      background-image: url('montage.jpg');
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-size: 100% 100%;
+      margin: 20px auto ;
+      font-size: 30px;
+      color: white;
+      position: relative;
+      cursor: pointer;
+    }
+  
+    .ddiv8::after{
+      width: 100%;
+      height: 100%;
+      background-color: black;
+      opacity: .4;
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  
+  }
+
+  .sec3{
+    background-color: #fff;
+  }
+
+  .first{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .all{
+    margin-left: 20px;
+    background-color: #fff;
+    color: #52b035;
+    border: 1px solid #52b035;
+    outline: none;
+    padding: 5px 10px;
+  }
+
+  .all:hover{
+    margin-left: 20px;
+    background-color: #52b035;
+    color: #fff;
+    border: 1px solid #52b035;
+    outline: none;
+    padding: 5px 10px;
+  }
+
+  .ddivv{
+    margin-right: 70px;
+    margin-top: 10px;
+    margin-left: 20px;
+  }
+
+  .allll{
+    margin-top: 10px;
+    font-size: 15px;
+    width: 230px;
+    direction: rtl;
+  }
+
+  .allll:hover{
+    margin-top: 10px;
+    font-size: 15px;
+    width: 230px;
+    direction: rtl;
+    color: #52b035;
+    cursor: pointer;
+  }
+
+  .sta{
+    filter: brightness(85%);
+    margin-bottom: 10px;
+  }
+
+  .p9p{
+    width: 300px;
+    color: gray;
+  }
+
+  .ggim{
+    width: 250px;
+    cursor: pointer;
+  }
+
+
+  
+  @media (max-width: 1199px) {
+    .ddivv{
+      margin-right: 90px;
+      margin-left: 30px;
+      margin-top: 10px;
+    }
+  }
+
+  @media (max-width: 992px) {
+    .ddivv{
+      margin-right: 100px;
+      margin-top: 10px;
+    }
+
+    .panel {
+      width: 500px;
+      padding: 0 18px;
+      background-color: #eaedea;
+      display: none;
+      overflow: hidden;
+      font-size: 15px;
+    }
+    .accordion{
+      width: 600px;
+      background-color: #eaedea;
+    }
+    .accordion:hover{
+      width: 1000x;
+      background-color: #eaedea;
+    }
+    
+  }
+
+
+    @media (max-width: 767px) {
+    .ddivv{
+      margin-left: 30px;
+      margin-top: 10px;
+    }
+    .ggim{
+      width: 350px;
+    }
+
+    .allll{
+      margin-top: 10px;
+      font-size: 20px;
+      width: 300px;
+      direction: rtl;
+    }
+  
+    .allll:hover{
+      margin-top: 10px;
+      font-size: 20px;
+      width: 300px;
+      direction: rtl;
+      color: #52b035;
+      cursor: pointer;
+    }
+  
+  }
+
+
+  /* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  width: 900px;
+  padding: 0 18px;
+  background-color: #eaedea;
+  display: none;
+  overflow: hidden;
+  font-size: 15px;
+}
+.accordion{
+  width: 1000px;
+  background-color: #eaedea;
+}
+.accordion:hover{
+  width: 1000px;
+  background-color: #eaedea;
+}
+
+
+.ceess{
+  display: flex;
+  justify-content: center;
+  background-color: #eaedea;
+}
+
+
+@media (max-width: 992px) {
+  .panel {
+    width: 500px;
+    padding: 0 18px;
+    background-color: #eaedea;
+    display: none;
+    overflow: hidden;
+    font-size: 15px;
+  }
+  .accordion{
+    width: 600px;
+    background-color: #eaedea;
+  }
+  .accordion:hover{
+    width: 600px;
+    background-color: #eaedea;
+  }
+}
+
+@media (max-width: 601px) {
+
+  .panel {
+    width: 400px;
+    padding: 0 18px;
+    background-color: #eaedea;
+    display: none;
+    overflow: hidden;
+    font-size: 15px;
+  }
+  .accordion{
+    width: 500px;
+    background-color: #eaedea;
+  }
+  .accordion:hover{
+    width: 500px;
+    background-color: #eaedea;
+  }
+
+}
+
+@media (max-width: 500px) {
+  .panel {
+    width: 300px;
+    padding: 0 18px;
+    background-color: #eaedea;
+    display: none;
+    overflow: hidden;
+    font-size: 15px;
+  }
+  .accordion{
+    width: 400px;
+    background-color: #eaedea;
+  }
+  .accordion:hover{
+    width: 400px;
+    background-color: #eaedea;
+  }
+}
+
+@media (max-width: 400px) {
+  .panel {
+    width: 200px;
+    padding: 0 18px;
+    background-color: #eaedea;
+    display: none;
+    overflow: hidden;
+    font-size: 15px;
+  }
+  .accordion{
+    width: 300px;
+    background-color: #eaedea;
+  }
+  .accordion:hover{
+    width: 300px;
+    background-color: #eaedea;
+  }
+}
+
+
+@media (max-width: 417px) {
+  .ggim{
+    width: 300px;
+    cursor: pointer;
+  }
+
+  .ddivv{
+    margin-right: 90px;
+    margin-top: 10px;
+    margin-left: 25px;
+  }
+}
+
+@media (max-width: 281px) {
+  .ggim{
+    width: 200px;
+    cursor: pointer;
+  }
+
+  .ddivv{
+    margin-right: 90px;
+    margin-top: 10px;
+    margin-left: 7px;
+  }
+
+  .allll{
+    margin-top: 10px;
+    font-size: 13px;
+    width: 230px;
+    direction: rtl;
+  }
+
+  .allll:hover{
+    margin-top: 10px;
+    font-size: 15px;
+    width: 230px;
+    direction: rtl;
+    color: #52b035;
+    cursor: pointer;
+  }
+
+}
+
+
+
+.niv{
+  width: 100%;
+  height: 60px;
+  background-color: #d3d3d3;
+  display: flex;
+  justify-content: space-between;
+}
+.flex{
+  direction: rtl;
+  display: flex;
+}
+
+.p88p{
+  font-size: 10px;
+  color: gray;
+  width: 200px;
+  direction: rtl;
+}
+
+.bid{
+  margin-right: 0px;
+}
+
+.h36h{
+  direction: rtl;
+}
+
+@media (max-width: 992px) {
+  .ccev{
+    display: none;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
